@@ -37,8 +37,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            ghcr.io/${{ github.repository_owner }}/nextcloud:${{ github.event.inputs.tag }}-fpm
+          tags: ghcr.io/${{ github.repository_owner }}/nextcloud:${{ github.event.inputs.tag }}-fpm
 
       - name: Logout from GitHub Container Registry
         run: docker logout ghcr.io
